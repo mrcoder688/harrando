@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades - Inmobiliaria Harrando</title>
+    <meta name="description" content="Catálogo de propiedades en Marruecos y España. Casas, apartamentos y terrenos de lujo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="main-nav" id="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">H</span>
+            <div class="nav-brand-text">
+                <span class="nav-title">Harrando</span>
+                <span class="nav-subtitle">Inmobiliaria</span>
+            </div>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="propiedades.html" class="active">Propiedades</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <a href="https://wa.me/212663218527" class="nav-cta" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+        </a>
+    </nav>
+
+    <header class="page-header">
+        <div class="page-header-bg">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80" alt="">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="page-header-content">
+            <span class="page-tag">Catálogo</span>
+            <h1>Nuestras Propiedades</h1>
+            <p>Encuentra la propiedad perfecta en Marruecos o España</p>
+        </div>
+    </header>
+
+    <section class="catalog-section">
+        <div class="container">
+            <div class="catalog-layout">
+                <aside class="filters-sidebar">
+                    <div class="filters-header">
+                        <h3>Filtros</h3>
+                        <button class="btn-reset" id="resetFilters">Limpiar</button>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>País</label>
+                        <select id="filterPais">
+                            <option value="">Todos</option>
+                            <option value="marruecos">🇲🇦 Marruecos</option>
+                            <option value="espana">🇪🇸 España</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Tipo</label>
+                        <select id="filterTipo">
+                            <option value="">Todos</option>
+                            <option value="casa">Casa</option>
+                            <option value="apartamento">Apartamento</option>
+                            <option value="villa">Villa</option>
+                            <option value="terreno">Terreno</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Precio máximo</label>
+                        <input type="range" id="filterPrecio" min="0" max="2000000" step="50000" value="2000000">
+                        <span class="filter-value" id="precioValue">€2,000,000</span>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Habitaciones</label>
+                        <div class="filter-chips" id="filterHabitaciones">
+                            <button data-value="">Cualquiera</button>
+                            <button data-value="1">1+</button>
+                            <button data-value="2">2+</button>
+                            <button data-value="3">3+</button>
+                            <button data-value="4">4+</button>
+                        </div>
+                    </div>
+                </aside>
+                
+                <div class="catalog-content">
+                    <div class="catalog-toolbar">
+                        <span class="results-count" id="resultsCount">Cargando...</span>
+                        <div class="sort-select">
+                            <select id="sortBy">
+                                <option value="destacado">Destacados primero</option>
+                                <option value="precio-asc">Precio: menor a mayor</option>
+                                <option value="precio-desc">Precio: mayor a menor</option>
+                                <option value="reciente">Más recientes</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="properties-grid" id="propertiesGrid">
+                        <!-- Loaded via JS -->
+                    </div>
+                    
+                    <div class="pagination" id="pagination">
+                        <!-- Loaded via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span>H</span>
+                        <div>
+                            <strong>Harrando</strong>
+                            <span>Inmobiliaria</span>
+                        </div>
+                    </div>
+                    <p>Yassin Sin Fronteras 🇲🇦🇪🇸<br>Especialistas en propiedades de lujo</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="propiedades.html">Propiedades</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📱 +212 663 218 527</li>
+                        <li>🇲🇦 Marruecos</li>
+                        <li>🇪🇸 España</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> 2024 Inmobiliaria Harrando. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html>

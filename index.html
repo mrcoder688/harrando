@@ -3,820 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#059669">
-    <meta name="description" content="Inmobiliaria Harrando - Tu hogar en Marruecos y España. Especialistas en propiedades de lujo, inversiones y alquileres.">
-    <title>Inmobiliaria Harrando | Tu Hogar Sin Fronteras 🇲🇦🇪🇸</title>
-    
-    <!-- Fonts -->
+    <title>Inmobiliaria Harrando - Yassin Sin Fronteras</title>
+    <meta name="description" content="Inmobiliaria Harrando - Especialistas en propiedades de lujo en Marruecos y España. Yassin sin fronteras.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-dot" id="cursorDot"></div>
-
     <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <a href="#" class="nav-logo">
-            <span class="logo-icon">H</span>
-            <div class="logo-text">
-                <span class="logo-main">Harrando</span>
-                <span class="logo-sub">Inmobiliaria</span>
+    <nav class="main-nav" id="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">H</span>
+            <div class="nav-brand-text">
+                <span class="nav-title">Harrando</span>
+                <span class="nav-subtitle">Inmobiliaria</span>
             </div>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="propiedades.html">Propiedades</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <a href="https://wa.me/212663218527" class="nav-cta" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
         </a>
-        <div class="nav-links">
-            <a href="#inicio" class="nav-link">Inicio</a>
-            <a href="#servicios" class="nav-link">Servicios</a>
-            <a href="#propiedades" class="nav-link">Propiedades</a>
-            <a href="#nosotros" class="nav-link">Nosotros</a>
-            <a href="#contacto" class="nav-link nav-cta">Contactar</a>
-        </div>
-        <div class="nav-toggle" id="navToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#inicio" class="mobile-link">Inicio</a>
-        <a href="#servicios" class="mobile-link">Servicios</a>
-        <a href="#propiedades" class="mobile-link">Propiedades</a>
-        <a href="#nosotros" class="mobile-link">Nosotros</a>
-        <a href="#contacto" class="mobile-link mobile-cta">Contactar</a>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="hero-bg">
-            <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80')"></div>
+    <!-- Hero Section - Video Background -->
+    <section class="hero">
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-luxury-resort-4377-large.mp4" type="video/mp4">
+            </video>
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <div class="hero-eyebrow">
-                <span class="line"></span>
-                <span class="text">🇲🇦 Marruecos · 🇪🇸 España</span>
-                <span class="line"></span>
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Yassin Sin Fronteras 🇲🇦🇪🇸</span>
             </div>
             <h1 class="hero-title">
-                <span class="title-line">Tu hogar</span>
-                <span class="title-line">sin <span class="accent">fronteras</span></span>
+                <span class="title-line">Encuentra tu</span>
+                <span class="title-line accent">hogar ideal</span>
+                <span class="title-line">sin límites</span>
             </h1>
-            <p class="hero-subtitle">
-                Especialistas en propiedades de lujo, inversiones inmobiliarias y alquileres 
-                en Marruecos y España. Más de 8.000 familias confían en nosotros.
+            <p class="hero-description">
+                Especialistas en propiedades de lujo en Marruecos y España. 
+                Más de 8,000 seguidores confían en nosotros para hacer realidad sus sueños inmobiliarios.
             </p>
-            <div class="hero-cta">
-                <a href="#propiedades" class="btn-primary">
-                    <span>Ver propiedades</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
+            <div class="hero-actions">
+                <a href="propiedades.html" class="btn btn-primary">
+                    <span>Ver Propiedades</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <a href="https://wa.me/212663218527" class="btn-secondary" target="_blank">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
+                <a href="https://www.tiktok.com/@inmobiliariaharrando" target="_blank" class="btn btn-outline">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.88-2.89 2.89 2.89 0 012.88-2.89c.2 0 .39.02.58.05v-3.5a6.37 6.37 0 00-.58-.03A6.34 6.34 0 003 15.28 6.34 6.34 0 009.34 21.62a6.34 6.34 0 006.34-6.34V8.92a8.06 8.06 0 004.91 1.67V7.08a4.82 4.82 0 01-1-.39z"/></svg>
+                    Síguenos en TikTok
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="8977">0</span>
+                    <span class="stat-label">Seguidores</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="55400">0</span>
+                    <span class="stat-label">Likes</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="2">0</span>
+                    <span class="stat-label">Países</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Descubre más</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Destacadas</span>
+                <h2 class="section-title">Propiedades Exclusivas</h2>
+                <p class="section-subtitle">Selección de las mejores propiedades en Marruecos y España</p>
+            </div>
+            <div class="properties-grid" id="featuredProperties">
+                <!-- Loaded via JS -->
+            </div>
+            <div class="section-footer">
+                <a href="propiedades.html" class="btn btn-secondary">
+                    Ver todas las propiedades
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <div class="services-layout">
+                <div class="services-content">
+                    <span class="section-tag">Servicios</span>
+                    <h2 class="section-title">Todo lo que necesitas<br>para tu inversión</h2>
+                    <p class="section-description">
+                        Desde la búsqueda hasta la entrega de llaves, te acompañamos 
+                        en cada paso del proceso inmobiliario.
+                    </p>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Venta de Propiedades</h4>
+                                <p>Casas, apartamentos y terrenos en Marruecos y España</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Asesoría Legal</h4>
+                                <p>Gestión de documentación y trámites internacionales</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Acompañamiento 24/7</h4>
+                                <p>Disponibles para ti en cualquier momento</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="servicios.html" class="btn btn-primary">Conoce todos los servicios</a>
+                </div>
+                <div class="services-image">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Casa de lujo">
+                    <div class="experience-card">
+                        <span class="exp-number">8K+</span>
+                        <span class="exp-text">Seguidores confían<br>en nosotros</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countries Section -->
+    <section class="countries-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Cobertura</span>
+                <h2 class="section-title">Operamos en Dos Países</h2>
+            </div>
+            <div class="countries-grid">
+                <div class="country-card">
+                    <div class="country-image">
+                        <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&q=80" alt="Marruecos">
+                        <div class="country-flag">🇲🇦</div>
+                    </div>
+                    <div class="country-info">
+                        <h3>Marruecos</h3>
+                        <p>Casablanca, Rabat, Tánger, Marrakech y más</p>
+                        <a href="propiedades.html?pais=marruecos" class="country-link">
+                            Ver propiedades 
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <div class="country-image">
+                        <img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=600&q=80" alt="España">
+                        <div class="country-flag">🇪🇸</div>
+                    </div>
+                    <div class="country-info">
+                        <h3>España</h3>
+                        <p>Madrid, Barcelona, Valencia, Málaga y más</p>
+                        <a href="propiedades.html?pais=espana" class="country-link">
+                            Ver propiedades
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-background">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80" alt="">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="cta-content">
+            <h2>¿Listo para encontrar tu hogar?</h2>
+            <p>Contacta con nosotros y te ayudaremos a hacer realidad tu sueño inmobiliario</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/212663218527" class="btn btn-light" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     WhatsApp
                 </a>
+                <a href="contacto.html" class="btn btn-outline-light">Contactar</a>
             </div>
-        </div>
-        <div class="hero-stats">
-            <div class="hero-stat">
-                <span class="stat-value">8.9K+</span>
-                <span class="stat-label">Seguidores</span>
-            </div>
-            <div class="hero-stat">
-                <span class="stat-value">55K+</span>
-                <span class="stat-label">Likes</span>
-            </div>
-            <div class="hero-stat">
-                <span class="stat-value">🇲🇦🇪🇸</span>
-                <span class="stat-label">Dos países</span>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <div class="scroll-indicator">
-                <span>Descubrir</span>
-                <div class="scroll-line"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Marquee -->
-    <section class="marquee-section">
-        <div class="marquee-track">
-            <span>Casablanca</span>
-            <span class="sep">◆</span>
-            <span>Rabat</span>
-            <span class="sep">◆</span>
-            <span>Tánger</span>
-            <span class="sep">◆</span>
-            <span>Marrakech</span>
-            <span class="sep">◆</span>
-            <span>Madrid</span>
-            <span class="sep">◆</span>
-            <span>Barcelona</span>
-            <span class="sep">◆</span>
-            <span>Valencia</span>
-            <span class="sep">◆</span>
-            <span>Málaga</span>
-            <span class="sep">◆</span>
-            <span>Casablanca</span>
-            <span class="sep">◆</span>
-            <span>Rabat</span>
-            <span class="sep">◆</span>
-            <span>Tánger</span>
-            <span class="sep">◆</span>
-            <span>Marrakech</span>
-            <span class="sep">◆</span>
-            <span>Madrid</span>
-            <span class="sep">◆</span>
-            <span>Barcelona</span>
-            <span class="sep">◆</span>
-            <span>Valencia</span>
-            <span class="sep">◆</span>
-            <span>Málaga</span>
-            <span class="sep">◆</span>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="servicios">
-        <div class="section-header">
-            <span class="section-eyebrow">Servicios</span>
-            <h2 class="section-title">Todo lo que necesitas</h2>
-            <p class="section-subtitle">Servicios integrales para comprar, vender o alquilar tu propiedad</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                        <polyline points="9 22 9 12 15 12 15 22"/>
-                    </svg>
-                </div>
-                <h3>Compra de Propiedades</h3>
-                <p>Encuentra tu hogar ideal en Marruecos o España. Te acompañamos en todo el proceso.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                        <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
-                    </svg>
-                </div>
-                <h3>Venta de Propiedades</h3>
-                <p>Vende tu propiedad al mejor precio y en el menor tiempo posible.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                        <path d="M2 17l10 5 10-5"/>
-                        <path d="M2 12l10 5 10-5"/>
-                    </svg>
-                </div>
-                <h3>Alquileres</h3>
-                <p>Amplia cartera de propiedades en alquiler para corta y larga temporada.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="12" y1="16" x2="12" y2="12"/>
-                        <line x1="12" y1="8" x2="12.01" y2="8"/>
-                    </svg>
-                </div>
-                <h3>Asesoría Legal</h3>
-                <p>Te ayudamos con toda la documentación y trámites legales en ambos países.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-                        <polyline points="17 6 23 6 23 12"/>
-                    </svg>
-                </div>
-                <h3>Inversiones</h3>
-                <p>Oportunidades de inversión inmobiliaria con alta rentabilidad.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                        <line x1="12" y1="22.08" x2="12" y2="12"/>
-                    </svg>
-                </div>
-                <h3>Gestión Integral</h3>
-                <p>Nos encargamos de todo: desde la búsqueda hasta la entrega de llaves.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Properties Section -->
-    <section class="properties" id="propiedades">
-        <div class="section-header">
-            <span class="section-eyebrow">Propiedades</span>
-            <h2 class="section-title">Destacadas</h2>
-            <p class="section-subtitle">Una selección de nuestras mejores propiedades</p>
-        </div>
-        <div class="properties-grid">
-            <article class="property-card featured">
-                <div class="property-image">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Villa de lujo" loading="lazy">
-                    <div class="property-badge">Destacada</div>
-                    <div class="property-overlay">
-                        <button class="btn-view">Ver detalles</button>
-                    </div>
-                </div>
-                <div class="property-content">
-                    <div class="property-location">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Casablanca, Marruecos
-                    </div>
-                    <h3>Villa de Lujo con Piscina</h3>
-                    <p>Espectacular villa de 450m² con jardín privado, piscina infinity y vistas al mar.</p>
-                    <div class="property-features">
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
-                            </svg>
-                            5 hab
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 12h20M2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6"/>
-                                <path d="M6 12V8a2 2 0 012-2h8a2 2 0 012 2v4"/>
-                            </svg>
-                            4 baños
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18M9 21V9"/>
-                            </svg>
-                            450 m²
-                        </span>
-                    </div>
-                    <div class="property-footer">
-                        <span class="property-price">2.500.000 €</span>
-                        <a href="https://wa.me/212663218527" class="property-link" target="_blank">Contactar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="property-card">
-                <div class="property-image">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Ático moderno" loading="lazy">
-                    <div class="property-overlay">
-                        <button class="btn-view">Ver detalles</button>
-                    </div>
-                </div>
-                <div class="property-content">
-                    <div class="property-location">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Madrid, España
-                    </div>
-                    <h3>Ático de Diseño en Centro</h3>
-                    <p>Ático de 200m² con terraza panorámica y acabados de alta calidad.</p>
-                    <div class="property-features">
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
-                            </svg>
-                            3 hab
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 12h20M2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6"/>
-                                <path d="M6 12V8a2 2 0 012-2h8a2 2 0 012 2v4"/>
-                            </svg>
-                            2 baños
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18M9 21V9"/>
-                            </svg>
-                            200 m²
-                        </span>
-                    </div>
-                    <div class="property-footer">
-                        <span class="property-price">1.200.000 €</span>
-                        <a href="https://wa.me/212663218527" class="property-link" target="_blank">Contactar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="property-card">
-                <div class="property-image">
-                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" alt="Casa tradicional" loading="lazy">
-                    <div class="property-overlay">
-                        <button class="btn-view">Ver detalles</button>
-                    </div>
-                </div>
-                <div class="property-content">
-                    <div class="property-location">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Marrakech, Marruecos
-                    </div>
-                    <h3>Riad Reformado en Medina</h3>
-                    <p>Auténtico riad marroquí de 300m² con patio central y azotea con vistas.</p>
-                    <div class="property-features">
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
-                            </svg>
-                            4 hab
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 12h20M2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6"/>
-                                <path d="M6 12V8a2 2 0 012-2h8a2 2 0 012 2v4"/>
-                            </svg>
-                            3 baños
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18M9 21V9"/>
-                            </svg>
-                            300 m²
-                        </span>
-                    </div>
-                    <div class="property-footer">
-                        <span class="property-price">850.000 €</span>
-                        <a href="https://wa.me/212663218527" class="property-link" target="_blank">Contactar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="property-card">
-                <div class="property-image">
-                    <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80" alt="Apartamento playa" loading="lazy">
-                    <div class="property-overlay">
-                        <button class="btn-view">Ver detalles</button>
-                    </div>
-                </div>
-                <div class="property-content">
-                    <div class="property-location">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Málaga, España
-                    </div>
-                    <h3>Apartamento Primera Línea</h3>
-                    <p>Apartamento de 120m² con vistas directas al mar y acceso a la playa.</p>
-                    <div class="property-features">
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
-                            </svg>
-                            2 hab
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 12h20M2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6"/>
-                                <path d="M6 12V8a2 2 0 012-2h8a2 2 0 012 2v4"/>
-                            </svg>
-                            2 baños
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18M9 21V9"/>
-                            </svg>
-                            120 m²
-                        </span>
-                    </div>
-                    <div class="property-footer">
-                        <span class="property-price">650.000 €</span>
-                        <a href="https://wa.me/212663218527" class="property-link" target="_blank">Contactar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="property-card">
-                <div class="property-image">
-                    <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80" alt="Finca rural" loading="lazy">
-                    <div class="property-overlay">
-                        <button class="btn-view">Ver detalles</button>
-                    </div>
-                </div>
-                <div class="property-content">
-                    <div class="property-location">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Tánger, Marruecos
-                    </div>
-                    <h3>Finca con Viñedos</h3>
-                    <p>Finca de 5 hectáreas con casa señorial, viñedos y establos.</p>
-                    <div class="property-features">
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
-                            </svg>
-                            6 hab
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 12h20M2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6"/>
-                                <path d="M6 12V8a2 2 0 012-2h8a2 2 0 012 2v4"/>
-                            </svg>
-                            4 baños
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18M9 21V9"/>
-                            </svg>
-                            5 Ha
-                        </span>
-                    </div>
-                    <div class="property-footer">
-                        <span class="property-price">1.800.000 €</span>
-                        <a href="https://wa.me/212663218527" class="property-link" target="_blank">Contactar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="property-card">
-                <div class="property-image">
-                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80" alt="Loft industrial" loading="lazy">
-                    <div class="property-overlay">
-                        <button class="btn-view">Ver detalles</button>
-                    </div>
-                </div>
-                <div class="property-content">
-                    <div class="property-location">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Barcelona, España
-                    </div>
-                    <h3>Loft Industrial Reformado</h3>
-                    <p>Loft de 180m² en antigua fábrica con diseño contemporáneo.</p>
-                    <div class="property-features">
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
-                            </svg>
-                            2 hab
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 12h20M2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6"/>
-                                <path d="M6 12V8a2 2 0 012-2h8a2 2 0 012 2v4"/>
-                            </svg>
-                            2 baños
-                        </span>
-                        <span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18M9 21V9"/>
-                            </svg>
-                            180 m²
-                        </span>
-                    </div>
-                    <div class="property-footer">
-                        <span class="property-price">950.000 €</span>
-                        <a href="https://wa.me/212663218527" class="property-link" target="_blank">Contactar</a>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="nosotros">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Inmobiliaria Harrando" loading="lazy">
-                <div class="about-experience">
-                    <span class="exp-number">10+</span>
-                    <span class="exp-text">Años de<br>experiencia</span>
-                </div>
-            </div>
-            <div class="about-content">
-                <span class="section-eyebrow">Sobre Nosotros</span>
-                <h2>Yassin sin fronteras</h2>
-                <p>
-                    Inmobiliaria Harrando nace de la pasión por conectar personas con su hogar ideal, 
-                    sin importar las fronteras. Especializados en el mercado inmobiliario de <strong>Marruecos y España</strong>, 
-                    ofrecemos un servicio integral que abarca desde la búsqueda de la propiedad perfecta 
-                    hasta la gestión de todos los trámites legales.
-                </p>
-                <p>
-                    Con más de <strong>8.900 seguidores</strong> en nuestra comunidad y <strong>55.000 likes</strong> 
-                    en TikTok, nos hemos consolidado como referentes en el sector. Nuestro compromiso es 
-                    hacer realidad el sueño de tener un hogar, ya sea en las vibrantes ciudades de Marruecos 
-                    o en el corazón de España.
-                </p>
-                <div class="about-stats">
-                    <div class="about-stat">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Propiedades vendidas</span>
-                    </div>
-                    <div class="about-stat">
-                        <span class="stat-number">8.9K+</span>
-                        <span class="stat-label">Seguidores TikTok</span>
-                    </div>
-                    <div class="about-stat">
-                        <span class="stat-number">2</span>
-                        <span class="stat-label">Países</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="section-header">
-            <span class="section-eyebrow">Testimonios</span>
-            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-stars">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-                <p class="testimonial-text">"Gracias a Yassin encontré mi riad en Marrakech. El proceso fue súper sencillo y me ayudaron con todos los papeles. ¡100% recomendado!"</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">A</div>
-                    <div class="author-info">
-                        <span class="author-name">Ahmed Benali</span>
-                        <span class="author-location">Casablanca, Marruecos</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-stars">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-                <p class="testimonial-text">"Invertí en un apartamento en Málaga y la gestión fue impecable. Me mantuvieron informado en todo momento. Profesionales de verdad."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">L</div>
-                    <div class="author-info">
-                        <span class="author-name">Laura García</span>
-                        <span class="author-location">Madrid, España</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-stars">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-                <p class="testimonial-text">"Alquilé mi piso en Barcelona a través de Harrando. Encontraron inquilino en una semana. Servicio rápido y eficiente."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">M</div>
-                    <div class="author-info">
-                        <span class="author-name">Mohamed El Amrani</span>
-                        <span class="author-location">Barcelona, España</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contacto">
-        <div class="contact-container">
-            <div class="contact-info">
-                <span class="section-eyebrow">Contacto</span>
-                <h2>Hablemos de tu próximo hogar</h2>
-                <p>Estamos aquí para ayudarte. Contáctanos por WhatsApp, teléfono o email y te responderemos en menos de 24 horas.</p>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-                        </svg>
-                        <div>
-                            <span class="label">Teléfono / WhatsApp</span>
-                            <span class="value">+212 663 218 527</span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        <div>
-                            <span class="label">Email</span>
-                            <span class="value">info@harrando.com</span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        <div>
-                            <span class="label">Oficina principal</span>
-                            <span class="value">Casablanca, Marruecos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="https://wa.me/212663218527" class="btn-whatsapp-large" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    Escríbenos por WhatsApp
-                </a>
-
-                <div class="social-links">
-                    <a href="https://www.tiktok.com/@inmobiliariaharrando" target="_blank" class="social-link tiktok">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.88-2.89 2.89 2.89 0 012.88-2.89c.23 0 .45.03.66.08v-3.5a6.36 6.36 0 00-.66-.04A6.34 6.34 0 003 15.38a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.02a8.16 8.16 0 004.8 1.55V7.12a4.85 4.85 0 01-1.89-.43z"/>
-                        </svg>
-                        TikTok
-                    </a>
-                    <a href="#" class="social-link instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="2" width="20" height="20" rx="5"/>
-                            <circle cx="12" cy="12" r="5"/>
-                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
-                        </svg>
-                        Instagram
-                    </a>
-                    <a href="#" class="social-link facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                        Facebook
-                    </a>
-                </div>
-            </div>
-
-            <form class="contact-form" id="contactForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="firstName">Nombre</label>
-                        <input type="text" id="firstName" name="firstName" required placeholder="Tu nombre">
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Apellidos</label>
-                        <input type="text" id="lastName" name="lastName" required placeholder="Tus apellidos">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Teléfono / WhatsApp</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+212 663 218 527">
-                </div>
-                <div class="form-group">
-                    <label for="interest">¿Qué buscas?</label>
-                    <select id="interest" name="interest">
-                        <option value="">Selecciona una opción</option>
-                        <option value="comprar">Comprar propiedad</option>
-                        <option value="vender">Vender propiedad</option>
-                        <option value="alquilar">Alquilar propiedad</option>
-                        <option value="invertir">Inversión inmobiliaria</option>
-                        <option value="asesoria">Asesoría legal</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="location">Ubicación de interés</label>
-                    <select id="location" name="location">
-                        <option value="">Selecciona ubicación</option>
-                        <option value="casablanca">Casablanca, Marruecos</option>
-                        <option value="rabat">Rabat, Marruecos</option>
-                        <option value="tanger">Tánger, Marruecos</option>
-                        <option value="marrakech">Marrakech, Marruecos</option>
-                        <option value="madrid">Madrid, España</option>
-                        <option value="barcelona">Barcelona, España</option>
-                        <option value="valencia">Valencia, España</option>
-                        <option value="malaga">Málaga, España</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensaje</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Cuéntanos qué buscas..."></textarea>
-                </div>
-                <button type="submit" class="btn-submit">
-                    <span>Enviar mensaje</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-                    </svg>
-                </button>
-            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <span class="footer-logo">Harrando</span>
-                <p>Tu hogar sin fronteras. Especialistas en propiedades de lujo en Marruecos y España.</p>
-                <div class="footer-social">
-                    <a href="https://www.tiktok.com/@inmobiliariaharrando" target="_blank" aria-label="TikTok">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.88-2.89 2.89 2.89 0 012.88-2.89c.23 0 .45.03.66.08v-3.5a6.36 6.36 0 00-.66-.04A6.34 6.34 0 003 15.38a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.02a8.16 8.16 0 004.8 1.55V7.12a4.85 4.85 0 01-1.89-.43z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="2" width="20" height="20" rx="5"/>
-                            <circle cx="12" cy="12" r="5"/>
-                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                    </a>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span>H</span>
+                        <div>
+                            <strong>Harrando</strong>
+                            <span>Inmobiliaria</span>
+                        </div>
+                    </div>
+                    <p>Yassin Sin Fronteras 🇲🇦🇪🇸<br>Especialistas en propiedades de lujo</p>
+                    <div class="footer-social">
+                        <a href="https://www.tiktok.com/@inmobiliariaharrando" target="_blank" aria-label="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.88-2.89 2.89 2.89 0 012.88-2.89c.2 0 .39.02.58.05v-3.5a6.37 6.37 0 00-.58-.03A6.34 6.34 0 003 15.28 6.34 6.34 0 009.34 21.62a6.34 6.34 0 006.34-6.34V8.92a8.06 8.06 0 004.91 1.67V7.08a4.82 4.82 0 01-1-.39z"/></svg>
+                        </a>
+                        <a href="https://wa.me/212663218527" target="_blank" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="propiedades.html">Propiedades</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📱 +212 663 218 527</li>
+                        <li>🇲🇦 Marruecos</li>
+                        <li>🇪🇸 España</li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-links">
-                <h4>Servicios</h4>
-                <a href="#servicios">Compra</a>
-                <a href="#servicios">Venta</a>
-                <a href="#servicios">Alquiler</a>
-                <a href="#servicios">Inversión</a>
-            </div>
-            <div class="footer-links">
-                <h4>Ubicaciones</h4>
-                <a href="#propiedades">Marruecos</a>
-                <a href="#propiedades">España</a>
-                <a href="#propiedades">Casablanca</a>
-                <a href="#propiedades">Madrid</a>
-            </div>
-            <div class="footer-links">
-                <h4>Contacto</h4>
-                <a href="https://wa.me/212663218527" target="_blank">WhatsApp</a>
-                <a href="tel:+212663218527">+212 663 218 527</a>
-                <a href="mailto:info@harrando.com">info@harrando.com</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Inmobiliaria Harrando. Todos los derechos reservados.</p>
-            <div class="footer-legal">
-                <a href="#">Privacidad</a>
-                <a href="#">Términos</a>
-                <a href="#">Cookies</a>
+            <div class="footer-bottom">
+                <p> 2024 Inmobiliaria Harrando. Todos los derechos reservados.</p>
+                <p class="footer-credit">Hecho con ❤️ para Yassin</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/212663218527" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-    </a>
-
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
